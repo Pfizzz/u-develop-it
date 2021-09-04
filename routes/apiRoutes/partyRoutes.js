@@ -42,7 +42,7 @@ router.delete('/party/:id', (req, res) => {
         if (err) {
             res.status(400).json({ error: res.message });
             // checks if anything was deleted
-        } else if (!resourceLimits.affectedRows) {
+        } else if (!results.affectedRows) {
             res.json({
                 message: 'Party not found'
             });
